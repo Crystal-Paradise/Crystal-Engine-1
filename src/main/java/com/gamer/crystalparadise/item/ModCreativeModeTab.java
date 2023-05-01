@@ -4,12 +4,23 @@ import com.gempire.init.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
-public class ModCreativeModeTab {
-    public static final CreativeModeTab GEMS_TAB = new CreativeModeTab("gemtab") {
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(ModItems.ROSE_QUARTZ_QUARTZ_GEM.get());
-        }
-    };
+import java.util.function.Supplier;
+
+public class ModCreativeModeTab extends CreativeModeTab {
+    private Supplier<ItemStack> displayStack;
+
+    public static final ModCreativeModeTab GEMS_TAB = new ModCreativeModeTab("gemtab", () -> new ItemStack(ModItems.ROSE_QUARTZ_QUARTZ_GEM.get()));
+    private ModCreativeModeTab(String label, Supplier<ItemStack> displayStack) {
+        super(label);
+        this.displayStack = displayStack;
+    }
+
+    @Override
+    public ItemStack makeIcon() { return displayStack.get(); }
+
+    @Override
+    public boolean canScroll() {
+        return true;
+    }
 
 }

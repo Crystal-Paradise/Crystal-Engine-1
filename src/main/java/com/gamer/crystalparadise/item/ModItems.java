@@ -14,10 +14,10 @@ public class ModItems {
      public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CrystalParadise.MODID);
 
      public static final RegistryObject<Item> TEST = ITEMS.register("test", () ->
-             new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+             new Item(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
 
      public static final RegistryObject<Item> TEST_GEM = ITEMS.register("test_gem", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModItemGroup.GEMSTONES)));
+             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
      }
 
 

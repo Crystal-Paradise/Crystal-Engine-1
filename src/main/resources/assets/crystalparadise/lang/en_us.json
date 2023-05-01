@@ -1,4 +1,6 @@
 {
   "item.crystalparadise.test": "Test",
-  "item.crystalparadise.test_gem": "Test Gem"
+  "item.crystalparadise.test_gem": "Test Gem",
+
+  "itemGroup.gemtab": "Gem Tab"
 }
