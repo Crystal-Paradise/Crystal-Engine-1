@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 public class ModCreativeModeTab extends CreativeModeTab {
     private Supplier<ItemStack> displayStack;
 
-    public static final ModCreativeModeTab GEMS_TAB = new ModCreativeModeTab("gemtab", () -> new ItemStack(ModItems.ROSE_QUARTZ_QUARTZ_GEM.get()));
+    public static final ModCreativeModeTab GEMS_TAB = new ModCreativeModeTab("gemtab", () -> new ItemStack(ModItems.PINK_CHROMA.get()));
     private ModCreativeModeTab(String label, Supplier<ItemStack> displayStack) {
         super(label);
         this.displayStack = displayStack;
