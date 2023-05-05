@@ -13,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
      public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CrystalParadise.MODID);
 
-     public static final RegistryObject<Item> TEST = ITEMS.register("test", () ->
+     public static final RegistryObject<Item> BLUE_PORCELAIN = ITEMS.register("blue_porcelain", () ->
              new Item(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
 
      public static final RegistryObject<Item> PINK_PORCELAIN = ITEMS.register("pink_porcelain", () ->
