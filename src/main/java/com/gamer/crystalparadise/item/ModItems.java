@@ -18,6 +18,13 @@ public class ModItems {
 
      public static final RegistryObject<Item> PINK_PORCELAIN = ITEMS.register("pink_porcelain", () ->
              new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
-     }
+
+     public static final RegistryObject<Item> BLUE_PORCELAIN = ITEMS.register("blue_porcelain", () ->
+             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+
+     public static final RegistryObject<Item> WHITE_PORCELAIN = ITEMS.register("white_porcelain", () ->
+             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+
+}
 
 
