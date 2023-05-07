@@ -14,8 +14,7 @@ public class ModItems {
      public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CrystalParadise.MODID);
 
      public static final RegistryObject<Item> YELLOW_PORCELAIN = ITEMS.register("yellow_porcelain", () ->
-             new Item(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
-
+             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
      public static final RegistryObject<Item> PINK_PORCELAIN = ITEMS.register("pink_porcelain", () ->
              new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
 
