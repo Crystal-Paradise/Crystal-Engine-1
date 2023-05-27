@@ -30,6 +30,8 @@ public class ModItems {
      public static final RegistryObject<Item> BLUE_KYANITE = ITEMS.register("blue_kyanite", () ->
              new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
 
+     public static final RegistryObject<Item> GREEN_KYANITE = ITEMS.register("green_kyanite", () ->
+             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
 
 }
 
