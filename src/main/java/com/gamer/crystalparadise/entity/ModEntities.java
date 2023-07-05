@@ -1,7 +1,7 @@
 package com.gamer.crystalparadise.entity;
 
 import com.gamer.crystalparadise.CrystalParadise;
-import com.gamer.crystalparadise.entity.gem.entities.Kyanite;
+import com.gamer.crystalparadise.entity.gem.entities.EntityKyanite;
 import com.gempire.Gempire;
 import com.gempire.init.AddonHandler;
 import com.gamer.crystalparadise.entity.gem.other.ModCruxes;
@@ -20,8 +20,8 @@ public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Gempire.MODID);
     public static HashMap<String, GemConditions> CRUXTOGEM = new HashMap<>();
 
-    public static final RegistryObject<EntityType<Kyanite>> KYANITE = ENTITIES.register("kyanite",
-            () -> EntityType.Builder.of(Kyanite::new, MobCategory.CREATURE)
+    public static final RegistryObject<EntityType<EntityKyanite>> KYANITE = ENTITIES.register("kyanite",
+            () -> EntityType.Builder.of(EntityKyanite::new, MobCategory.CREATURE)
                     .sized(.75f, 1.5f) // Hitbox Size
                     //Name of the gem (same as above) and where it will exist
                     .build(new ResourceLocation(CrystalParadise.MODID, "kyanite").toString()));
@@ -38,6 +38,6 @@ public class ModEntities {
     public static void setAddonGems(){
         //registers entity as a gem
         AddonHandler.VANILLA_GEMS.add("porcelain");
-        AddonHandler.ADDON_ENTITY_REGISTRIES.put("poreclain", Kyanite.class);
+        AddonHandler.ADDON_ENTITY_REGISTRIES.put("poreclain", EntityKyanite.class);
     }
 }

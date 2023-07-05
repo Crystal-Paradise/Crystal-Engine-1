@@ -1,6 +1,6 @@
 package com.gamer.crystalparadise;
 
-import com.gamer.crystalparadise.entity.gem.entities.Kyanite;
+import com.gamer.crystalparadise.entity.gem.entities.EntityKyanite;
 import com.gamer.crystalparadise.entity.ModEntities;
 import com.gempire.init.EventHandler;
 import com.mojang.logging.LogUtils;
@@ -38,7 +38,7 @@ public class CrystalParadise
 
     public void EntityAttributes(final EntityAttributeCreationEvent event) {
         //register entity attributes, these are set in the EntityTestGem class
-        event.put(ModEntities.KYANITE.get(), Kyanite.registerAttributes().build());
+        event.put(ModEntities.KYANITE.get(), EntityKyanite.registerAttributes().build());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
