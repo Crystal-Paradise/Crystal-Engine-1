@@ -17,7 +17,7 @@ public class ClientProxy {
 
         @SubscribeEvent
         public static void onClientSetup(EntityRenderersEvent.RegisterRenderers event) {
-            event.registerEntityRenderer(ModEntities.TEST.get(), m -> new RenderTest(m, new ModelTest<>(m.bakeLayer(ModelTest.LAYER_LOCATION))));
+            event.registerEntityRenderer(ModEntities.PORCELAIN.get(), m -> new RenderTest(m, new ModelTest<>(m.bakeLayer(ModelTest.LAYER_LOCATION))));
         }
 
         @SubscribeEvent

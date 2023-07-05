@@ -14,30 +14,30 @@ public class ModItems {
      public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CrystalParadise.MODID);
 
      public static final RegistryObject<Item> YELLOW_PORCELAIN = ITEMS.register("yellow_porcelain", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB))).CrystalParadise.MODID;
+             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
      public static final RegistryObject<Item> PINK_PORCELAIN = ITEMS.register("pink_porcelain", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB))).CrystalParadise.MODID;
+             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
      public static final RegistryObject<Item> BLUE_PORCELAIN = ITEMS.register("blue_porcelain", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
      public static final RegistryObject<Item> WHITE_PORCELAIN = ITEMS.register("white_porcelain", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
      public static final RegistryObject<Item> BLACK_KYANITE = ITEMS.register("black_kyanite", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
      public static final RegistryObject<Item> BLUE_KYANITE = ITEMS.register("blue_kyanite", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
      public static final RegistryObject<Item> GREEN_KYANITE = ITEMS.register("green_kyanite", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
     public static final RegistryObject<Item> GREY_KYANITE = ITEMS.register("grey_kyanite", () ->
-            new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+            new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
      public static final RegistryObject<Item> ORANGE_KYANITE = ITEMS.register("orange_kyanite", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
 }
 

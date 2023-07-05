@@ -1,7 +1,7 @@
 package com.gamer.crystalparadise.entity;
 
 import com.gamer.crystalparadise.CrystalParadise;
-import com.gamer.crystalparadise.entity.gem.entities.EntityTest;
+import com.gamer.crystalparadise.entity.gem.entities.Porcelain;
 import com.gempire.Gempire;
 import com.gempire.init.AddonHandler;
 import com.gamer.crystalparadise.entity.gem.other.ModCruxes;
@@ -20,11 +20,11 @@ public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Gempire.MODID);
     public static HashMap<String, GemConditions> CRUXTOGEM = new HashMap<>();
 
-    public static final RegistryObject<EntityType<EntityTest>> TEST = ENTITIES.register("test",
-            () -> EntityType.Builder.of(EntityTest::new, MobCategory.CREATURE)
+    public static final RegistryObject<EntityType<Porcelain>> PORCELAIN = ENTITIES.register("porcelian",
+            () -> EntityType.Builder.of(Porcelain::new, MobCategory.CREATURE)
                     .sized(.75f, 1.5f) // Hitbox Size
                     //Name of the gem (same as above) and where it will exist
-                    .build(new ResourceLocation(CrystalParadise.MODID, "test").toString()));
+                    .build(new ResourceLocation(CrystalParadise.MODID, "porcelain").toString()));
 
     public static void registerCruxes() {
         //register cruxes
@@ -38,6 +38,6 @@ public class ModEntities {
     public static void setAddonGems(){
         //registers entity as a gem
         AddonHandler.VANILLA_GEMS.add("test");
-        AddonHandler.ADDON_ENTITY_REGISTRIES.put("test", EntityTest.class);
+        AddonHandler.ADDON_ENTITY_REGISTRIES.put("test", Porcelain.class);
     }
 }

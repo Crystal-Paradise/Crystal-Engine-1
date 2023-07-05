@@ -1,9 +1,8 @@
 package com.gamer.crystalparadise;
 
-import com.gamer.crystalparadise.entity.gem.entities.EntityTest;
+import com.gamer.crystalparadise.entity.gem.entities.Porcelain;
 import com.gamer.crystalparadise.entity.ModEntities;
 import com.gempire.init.EventHandler;
-import com.gempire.items.ItemGem;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -11,7 +10,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -40,7 +38,7 @@ public class CrystalParadise
 
     public void EntityAttributes(final EntityAttributeCreationEvent event) {
         //register entity attributes, these are set in the EntityTestGem class
-        event.put(ModEntities.TEST.get(), EntityTest.registerAttributes().build());
+        event.put(ModEntities.PORCELAIN.get(), Porcelain.registerAttributes().build());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

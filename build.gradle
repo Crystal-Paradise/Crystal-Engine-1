@@ -146,6 +146,8 @@ dependencies {
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.19.2-43.2.0'
 
+    implementation fg.deobf("Gradle:geckolib-forge:geckolib-forge")
+    implementation fg.deobf("Gradle:Patchouli-76:Patchouli-76")
     implementation fg.deobf("Gradle:gempire-2.1:gempire-2.1.jar")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
