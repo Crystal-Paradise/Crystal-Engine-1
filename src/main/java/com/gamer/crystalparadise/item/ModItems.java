@@ -13,25 +13,32 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
      public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CrystalParadise.MODID);
 
-     public static final RegistryObject<Item> YELLOW_PORCELAIN = ITEMS.register("yellow_porcelain", () ->
-             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
-     public static final RegistryObject<Item> PINK_PORCELAIN = ITEMS.register("pink_porcelain", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+    public static final RegistryObject<Item> WHITE_PORCELAIN_GEM = ITEMS.register("porcelain_gem_0", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-     public static final RegistryObject<Item> BLUE_PORCELAIN = ITEMS.register("blue_porcelain", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+     public static final RegistryObject<Item> YELLOW_PORCELAIN_GEM = ITEMS.register("porcelain_gem_4", () ->
+             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+     public static final RegistryObject<Item> PINK_PORCELAIN_GEM = ITEMS.register("porcelain_gem_6", () ->
+             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-     public static final RegistryObject<Item> WHITE_PORCELAIN = ITEMS.register("white_porcelain", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+     public static final RegistryObject<Item> BLUE_PORCELAIN_GEM = ITEMS.register("porcelain_gem_11", () ->
+             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-     public static final RegistryObject<Item> BLACK_KYANITE = ITEMS.register("black_kyanite", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
 
-     public static final RegistryObject<Item> BLUE_KYANITE = ITEMS.register("blue_kyanite", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+    public static final RegistryObject<Item> ORANGE_KYANITE_GEM = ITEMS.register("kyanite_gem_1", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-     public static final RegistryObject<Item> GREEN_KYANITE = ITEMS.register("green_kyanite", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB)));
+    public static final RegistryObject<Item> GRAY_KYANITE_GEM = ITEMS.register("kyanite_gem_7", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+
+    public static final RegistryObject<Item> BLUE_KYANITE_GEM = ITEMS.register("kyanite_gem_11", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+
+    public static final RegistryObject<Item> GREEN_KYANITE_GEM = ITEMS.register("kyanite_gem_13", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+
+    public static final RegistryObject<Item> BLACK_KYANITE_GEM = ITEMS.register("kyanite_gem_15", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
 }
 

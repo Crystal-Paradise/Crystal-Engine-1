@@ -1,10 +1,15 @@
 {
-  "item.crystalparadise.yellow_porcelain": "Yellow Porcelain",
-  "item.crystalparadise.pink_porcelain": "Pink Porcelain",
-  "item.crystalparadise.blue_porcelain": "Blue Porcelain",
-  "item.crystalparadise.white_porcelain": "White Porcelain",
-  "item.crystalparadise.black_kyanite": "Black Kyanite",
-  "item.crystalparadise.blue_kyanite": "Blue Kyanite",
+  "item.crystalparadise.porcelain_gem_0": "White Porcelain",
+  "item.crystalparadise.porcelain_gem_4": "Yellow Porcelain",
+  "item.crystalparadise.porcelain_gem_6": "Pink Porcelain",
+  "item.crystalparadise.porcelain_gem_11": "Blue Porcelain",
+  "item.crystalparadise.kyanite_gem_1": "Orange Kyanite",
+  "item.crystalparadise.kyanite_gem_7": "Grey Kyanite",
+  "item.crystalparadise.kyanite_gem_11": "Blue Kyanite",
+  "item.crystalparadise.kyanite_gem_13": "Green Kyanite",
+  "item.crystalparadise.kyanite_gem_15": "Black Kyanite",
+
+  "entity.gempire.kyanite": "Kyanite",
 
   "itemGroup.gemtab": "Gem Tab"
 }

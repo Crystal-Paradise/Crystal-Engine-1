@@ -15,7 +15,7 @@ apply plugin: 'org.spongepowered.mixin'
 
 version = '0.1'
 group = 'com.gamer.crystalparadise' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'modid'
+archivesBaseName = 'crystalparadise'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -126,8 +126,21 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+    maven {
         url 'https://www.cursemaven.com'
     }
+    flatDir { dirs 'repositories/_libs' }
+    maven { url 'https://maven.blamejared.com' }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 }
 
     // Put repositories for dependencies here
@@ -144,9 +157,18 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.19.2-43.2.0'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-    compileOnly fg.deobf("curse.maven:gempire-427613:4500339")
-    runtimeOnly fg.deobf("curse.maven:gempire-427613:4500339")
+    compileOnly(fg.deobf("mezz.jei:jei-1.19.2-common-api:11.2.0.247"))
+    compileOnly(fg.deobf("mezz.jei:jei-1.19.2-forge-api:11.2.0.247"))
+    // at runtime, use the full JEI jar for Forge
+    runtimeOnly(fg.deobf("mezz.jei:jei-1.19.2-forge:11.2.0.247"))
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.19.2-77:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.19.2-77")
+    runtimeOnly fg.deobf("curse.maven:worldedit-225608:3922622")
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.19:3.1.40')
+
+    implementation fg.deobf("Gradle:gempire-2.1:gempire-2.1.jar")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency

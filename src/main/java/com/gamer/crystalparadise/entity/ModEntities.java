@@ -1,8 +1,9 @@
 package com.gamer.crystalparadise.entity;
 
 import com.gamer.crystalparadise.CrystalParadise;
-import com.gamer.crystalparadise.entity.gem.entities.EntityTest;
+import com.gamer.crystalparadise.entity.gem.entities.EntityKyanite;
 import com.gempire.Gempire;
+import com.gempire.entities.bases.EntityGem;
 import com.gempire.init.AddonHandler;
 import com.gamer.crystalparadise.entity.gem.other.ModCruxes;
 import com.gempire.systems.injection.GemConditions;
@@ -20,24 +21,25 @@ public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Gempire.MODID);
     public static HashMap<String, GemConditions> CRUXTOGEM = new HashMap<>();
 
-    public static final RegistryObject<EntityType<EntityTest>> TEST = ENTITIES.register("test",
-            () -> EntityType.Builder.of(EntityTest::new, MobCategory.CREATURE)
-                    .sized(.75f, 1.5f) // Hitbox Size
+    public static final RegistryObject<EntityType<EntityKyanite>> KYANITE = ENTITIES.register("kyanite",
+            () -> EntityType.Builder.of(EntityKyanite::new, MobCategory.CREATURE)
+                    .sized(.75f, 3f) // Hitbox Size
                     //Name of the gem (same as above) and where it will exist
-                    .build(new ResourceLocation(CrystalParadise.MODID, "test").toString()));
+                    .build(new ResourceLocation(CrystalParadise.MODID, "kyanite").toString()));
 
     public static void registerCruxes() {
         //register cruxes
-        ModEntities.CRUXTOGEM.put("test", ModCruxes.TEST_CONDITIONS());
+        ModEntities.CRUXTOGEM.put("kyanite", ModCruxes.KYANITE_CONDITIONS());
         //possible to be injected with tier one (can be both)
-        GemFormation.POSSIBLE_GEMS_TIER_1.add("test");
+        GemFormation.POSSIBLE_GEMS_TIER_1.add("kyanite");
         //possible to be injected with tier two (can be both)
-        GemFormation.POSSIBLE_GEMS_TIER_2.add("test");
+        GemFormation.POSSIBLE_GEMS_TIER_2.add("kyanite");
     }
 
     public static void setAddonGems(){
         //registers entity as a gem
-        AddonHandler.VANILLA_GEMS.add("test");
-        AddonHandler.ADDON_ENTITY_REGISTRIES.put("test", EntityTest.class);
+        AddonHandler.ENTITY_ADDON_ENTITY_REGISTRIES.put("kyanite", ModEntities.class);
+
+        AddonHandler.ADDON_ENTITY_REGISTRIES.put("crystalparadise", ModEntities.class);
     }
 }
