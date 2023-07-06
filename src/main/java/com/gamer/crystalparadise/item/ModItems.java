@@ -13,31 +13,32 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
      public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CrystalParadise.MODID);
 
-     public static final RegistryObject<Item> YELLOW_PORCELAIN_GEM = ITEMS.register("yellow_porcelain_gem", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
-     public static final RegistryObject<Item> PINK_PORCELAIN_GEM = ITEMS.register("pink_porcelain_gem", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+    public static final RegistryObject<Item> WHITE_PORCELAIN_GEM = ITEMS.register("porcelain_gem_0", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-     public static final RegistryObject<Item> BLUE_PORCELAIN_GEM = ITEMS.register("blue_porcelain_gem", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+     public static final RegistryObject<Item> YELLOW_PORCELAIN_GEM = ITEMS.register("porcelain_gem_4", () ->
+             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+     public static final RegistryObject<Item> PINK_PORCELAIN_GEM = ITEMS.register("porcelain_gem_6", () ->
+             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-     public static final RegistryObject<Item> WHITE_PORCELAIN_GEM = ITEMS.register("white_porcelain_gem", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+     public static final RegistryObject<Item> BLUE_PORCELAIN_GEM = ITEMS.register("porcelain_gem_11", () ->
+             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-     public static final RegistryObject<Item> BLACK_KYANITE_GEM = ITEMS.register("black_kyanite_gem", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-     public static final RegistryObject<Item> BLUE_KYANITE_GEM = ITEMS.register("blue_kyanite_gem", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+    public static final RegistryObject<Item> ORANGE_KYANITE_GEM = ITEMS.register("kyanite_gem_1", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-     public static final RegistryObject<Item> GREEN_KYANITE_GEM = ITEMS.register("green_kyanite_gem", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+    public static final RegistryObject<Item> GREY_KYANITE_GEM = ITEMS.register("kyanite_gem_7", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-    public static final RegistryObject<Item> GREY_KYANITE_GEM = ITEMS.register("grey_kyanite_gem", () ->
-            new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+    public static final RegistryObject<Item> BLUE_KYANITE_GEM = ITEMS.register("kyanite_gem_11", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-     public static final RegistryObject<Item> ORANGE_KYANITE_GEM = ITEMS.register("orange_kyanite_gem", () ->
-             new ItemGem(new ItemGem.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+    public static final RegistryObject<Item> GREEN_KYANITE_GEM = ITEMS.register("kyanite_gem_13", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+
+    public static final RegistryObject<Item> BLACK_KYANITE_GEM = ITEMS.register("kyanite_gem_15", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
 }
 

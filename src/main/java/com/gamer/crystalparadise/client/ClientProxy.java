@@ -1,9 +1,10 @@
 package com.gamer.crystalparadise.client;
 
 import com.gamer.crystalparadise.CrystalParadise;
-import com.gamer.crystalparadise.client.entity.model.ModelTest;
-import com.gamer.crystalparadise.client.entity.render.RenderTest;
+import com.gamer.crystalparadise.client.entity.model.ModelKyanite;
+import com.gamer.crystalparadise.client.entity.render.RenderKyanite;
 import com.gamer.crystalparadise.entity.ModEntities;
+import com.gempire.client.entity.model.ModelRuby;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -17,13 +18,13 @@ public class ClientProxy {
 
         @SubscribeEvent
         public static void onClientSetup(EntityRenderersEvent.RegisterRenderers event) {
-            event.registerEntityRenderer(ModEntities.KYANITE.get(), m -> new RenderTest(m, new ModelTest<>(m.bakeLayer(ModelTest.LAYER_LOCATION))));
+            event.registerEntityRenderer(ModEntities.KYANITE.get(), m -> new RenderKyanite(m, new ModelKyanite<>(m.bakeLayer(ModelKyanite.LAYER_LOCATION))));
         }
 
         @SubscribeEvent
         public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
             //register layers here
-            event.registerLayerDefinition(ModelTest.LAYER_LOCATION, ModelTest::createBodyLayer);
+            event.registerLayerDefinition(ModelKyanite.LAYER_LOCATION, ModelKyanite::createBodyLayer);
         }
 
     }
