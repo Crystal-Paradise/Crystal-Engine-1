@@ -3,6 +3,7 @@ package com.gamer.crystalparadise.entity;
 import com.gamer.crystalparadise.CrystalParadise;
 import com.gamer.crystalparadise.entity.gem.entities.EntityKyanite;
 import com.gempire.Gempire;
+import com.gempire.entities.bases.EntityGem;
 import com.gempire.init.AddonHandler;
 import com.gamer.crystalparadise.entity.gem.other.ModCruxes;
 import com.gempire.systems.injection.GemConditions;
@@ -28,16 +29,17 @@ public class ModEntities {
 
     public static void registerCruxes() {
         //register cruxes
-        ModEntities.CRUXTOGEM.put("test", ModCruxes.TEST_CONDITIONS());
+        ModEntities.CRUXTOGEM.put("kyanite", ModCruxes.KYANITE_CONDITIONS());
         //possible to be injected with tier one (can be both)
-        GemFormation.POSSIBLE_GEMS_TIER_1.add("test");
+        GemFormation.POSSIBLE_GEMS_TIER_1.add("kyanite");
         //possible to be injected with tier two (can be both)
-        GemFormation.POSSIBLE_GEMS_TIER_2.add("test");
+        GemFormation.POSSIBLE_GEMS_TIER_2.add("kyanite");
     }
 
     public static void setAddonGems(){
         //registers entity as a gem
-        AddonHandler.VANILLA_GEMS.add("porcelain");
-        AddonHandler.ADDON_ENTITY_REGISTRIES.put("poreclain", EntityKyanite.class);
+        AddonHandler.ENTITY_ADDON_ENTITY_REGISTRIES.put("kyanite", ModEntities.class);
+
+        AddonHandler.ADDON_ENTITY_REGISTRIES.put("crystalparadise", ModEntities.class);
     }
 }

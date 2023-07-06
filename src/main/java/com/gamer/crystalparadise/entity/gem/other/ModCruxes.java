@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class ModCruxes {
     private static final int stoneCruxValue = 1;
 
-    public static GemConditions TEST_CONDITIONS(){
+    public static GemConditions KYANITE_CONDITIONS(){
         //this is always like this
         ArrayList<Crux> gemCruxes = new ArrayList<>();
         //add temperatures, these are biome temperatures, reference other gems to set these
