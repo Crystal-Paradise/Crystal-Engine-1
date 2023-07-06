@@ -107,7 +107,7 @@ public class EntityKyanite extends EntityVaryingGem {
     @Override
     public GemPlacements[] getPlacements() {
         return new GemPlacements[] {
-                GemPlacements.BACK
+                GemPlacements.FOREHEAD
         };
     }
 
@@ -164,14 +164,14 @@ public class EntityKyanite extends EntityVaryingGem {
     @Override
     public Abilities[] possibleAbilities() {
         return new Abilities[] {
-
+                Abilities.NO_ABILITY, Abilities.TINKERER, Abilities.SALVAGING
         };
     }
 
     @Override
     public Abilities[] definiteAbilities() {
         return new Abilities[] {
-
+            Abilities.BEEFCAKE
         };
     }
 }

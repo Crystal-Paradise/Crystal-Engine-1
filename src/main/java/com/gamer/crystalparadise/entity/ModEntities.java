@@ -23,7 +23,7 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<EntityKyanite>> KYANITE = ENTITIES.register("kyanite",
             () -> EntityType.Builder.of(EntityKyanite::new, MobCategory.CREATURE)
-                    .sized(.75f, 1.5f) // Hitbox Size
+                    .sized(.75f, 3f) // Hitbox Size
                     //Name of the gem (same as above) and where it will exist
                     .build(new ResourceLocation(CrystalParadise.MODID, "kyanite").toString()));
 
