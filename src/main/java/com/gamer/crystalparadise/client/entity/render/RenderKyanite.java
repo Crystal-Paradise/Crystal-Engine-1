@@ -21,7 +21,6 @@ public class RenderKyanite extends MobRenderer<EntityKyanite, ModelKyanite<Entit
         this.addLayer(new SkinLayer(this));
         this.addLayer(new FaceLayer(this));
         this.addLayer(new HairLayer(this));
-        //this.addLayer(new BootsLayer(this));
         this.addLayer(new OutfitLayer(this));
         this.addLayer(new InsigniaLayer(this));
         this.addLayer(new VisorLayer(this));
