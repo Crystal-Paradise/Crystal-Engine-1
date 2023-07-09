@@ -3,6 +3,8 @@ package com.gamer.crystalparadise.client.entity.model;// Made with Blockbench 4.
 // Paste this class into your mod and generate all required imports
 
 
+import com.gempire.client.entity.model.ModelGem;
+import com.gempire.entities.bases.EntityGem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.EntityModel;
@@ -11,12 +13,14 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
+import net.minecraft.world.entity.HumanoidArm;
 
 import javax.swing.text.html.parser.Entity;
 
-public class ModelPorcelain<T extends Entity> {
+public class ModelPorcelain<T extends EntityGem> extends ModelGem<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "cypmodelporcelain"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("crystalparadise", "porcelain"), "main");
 	private final ModelPart Chest;
 	private final ModelPart Head;
 	private final ModelPart ArmLeft;
@@ -68,4 +72,33 @@ public class ModelPorcelain<T extends Entity> {
 		return LayerDefinition.create(meshdefinition, 128, 128);
 	}
 
+
+	@Override
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.setRotateAngle(Head, headPitch * 0.5f * ((float)Math.PI / 180F), netHeadYaw * .5f * ((float)Math.PI / 180F), 0);
+		this.setRotateAngle(ArmLeft, Mth.cos(limbSwing * 0.5F + (float)Math.PI) * limbSwingAmount * 0.8f, 0, 0);
+		this.setRotateAngle(ArmRight, Mth.cos(limbSwing * 0.5F)  * limbSwingAmount * 0.8f, 0, 0);
+	}
+
+	public void setRotateAngle(ModelPart modelRenderer, float x, float y, float z) {
+		modelRenderer.xRot = x;
+		modelRenderer.yRot = y;
+		modelRenderer.zRot = z;
+	}
+
+	@Override
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+		Head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		Chest.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		ArmRight.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		ArmLeft.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		Dress.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		LegRight.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		LegLeft.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+	}
+
+	@Override
+	public ModelPart getArm(HumanoidArm p_102852_) {
+		return p_102852_ == HumanoidArm.LEFT ? this.ArmLeft : this.ArmRight;
+	}
 }

@@ -2,6 +2,7 @@ package com.gamer.crystalparadise;
 
 import com.gamer.crystalparadise.entity.gem.entities.EntityKyanite;
 import com.gamer.crystalparadise.entity.ModEntities;
+import com.gamer.crystalparadise.entity.gem.entities.EntityPorcelain;
 import com.gempire.init.EventHandler;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
@@ -42,6 +43,7 @@ public class CrystalParadise
     public void EntityAttributes(final EntityAttributeCreationEvent event) {
         //register entity attributes, these are set in the EntityTestGem class
         event.put(ModEntities.KYANITE.get(), EntityKyanite.registerAttributes().build());
+        event.put(ModEntities.PORCELAIN.get(), EntityPorcelain.registerAttributes().build());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

@@ -69,6 +69,5 @@ public class ModCruxes {
         int rarity = 1;
         return new GemConditions(gemCruxes, essences, primer, gemTemperatureMin, gemTemperatureMax, rarity);
     }
-    
-}
 
+}

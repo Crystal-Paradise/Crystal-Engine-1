@@ -28,25 +28,22 @@ public class ModEntities {
                     //Name of the gem (same as above) and where it will exist
                     .build(new ResourceLocation(CrystalParadise.MODID, "kyanite").toString()));
 
-
     public static final RegistryObject<EntityType<EntityPorcelain>> PORCELAIN = ENTITIES.register("porcelain",
             () -> EntityType.Builder.of(EntityPorcelain::new, MobCategory.CREATURE)
-                    .sized(.75f, 3f) // Hitbox Size
+                    .sized(.75f, 1.5f) // Hitbox Size
                     //Name of the gem (same as above) and where it will exist
                     .build(new ResourceLocation(CrystalParadise.MODID, "porcelain").toString()));
+
     public static void registerCruxes() {
         //register cruxes
         ModEntities.CRUXTOGEM.put("kyanite", ModCruxes.KYANITE_CONDITIONS());
+        ModEntities.CRUXTOGEM.put("porcelain", ModCruxes.PORCELAIN_CONDITIONS());
+
         //possible to be injected with tier one (can be both)
         GemFormation.POSSIBLE_GEMS_TIER_1.add("kyanite");
-        //possible to be injected with tier two (can be both)
-        GemFormation.POSSIBLE_GEMS_TIER_2.add("kyanite");
-
-        //register cruxes
-        ModEntities.CRUXTOGEM.put("porcelain", ModCruxes.PORCELAIN_CONDITIONS());
-        //possible to be injected with tier one (can be both)
         GemFormation.POSSIBLE_GEMS_TIER_1.add("porcelain");
         //possible to be injected with tier two (can be both)
+        GemFormation.POSSIBLE_GEMS_TIER_2.add("kyanite");
         GemFormation.POSSIBLE_GEMS_TIER_2.add("porcelain");
     }
 
