@@ -40,6 +40,10 @@ public class ModItems {
     public static final RegistryObject<Item> BLACK_KYANITE_GEM = ITEMS.register("kyanite_gem_15", () ->
             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
+    public static final RegistryObject<Item> IRON_GEM = ITEMS.register("iron_gem_0", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+
 }
+
 
 

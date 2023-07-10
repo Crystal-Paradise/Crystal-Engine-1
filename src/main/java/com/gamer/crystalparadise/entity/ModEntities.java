@@ -34,17 +34,26 @@ public class ModEntities {
                     //Name of the gem (same as above) and where it will exist
                     .build(new ResourceLocation(CrystalParadise.MODID, "porcelain").toString()));
 
+    public static final RegistryObject<EntityType<EntityPorcelain>> IRON = ENTITIES.register("iron",
+            () -> EntityType.Builder.of(EntityPorcelain::new, MobCategory.CREATURE)
+                    .sized(.75f, 1.5f) // Hitbox Size
+                    //Name of the gem (same as above) and where it will exist
+                    .build(new ResourceLocation(CrystalParadise.MODID, "iron").toString()));
+
     public static void registerCruxes() {
         //register cruxes
         ModEntities.CRUXTOGEM.put("kyanite", ModCruxes.KYANITE_CONDITIONS());
         ModEntities.CRUXTOGEM.put("porcelain", ModCruxes.PORCELAIN_CONDITIONS());
+        ModEntities.CRUXTOGEM.put("iron", ModCruxes.PORCELAIN_CONDITIONS());
 
         //possible to be injected with tier one (can be both)
         GemFormation.POSSIBLE_GEMS_TIER_1.add("kyanite");
         GemFormation.POSSIBLE_GEMS_TIER_1.add("porcelain");
+        GemFormation.POSSIBLE_GEMS_TIER_1.add("iron");
         //possible to be injected with tier two (can be both)
         GemFormation.POSSIBLE_GEMS_TIER_2.add("kyanite");
         GemFormation.POSSIBLE_GEMS_TIER_2.add("porcelain");
+        GemFormation.POSSIBLE_GEMS_TIER_2.add("iron");
     }
 
     public static void setAddonGems(){
@@ -52,6 +61,8 @@ public class ModEntities {
         AddonHandler.ENTITY_ADDON_ENTITY_REGISTRIES.put("kyanite", ModEntities.class);
 
         AddonHandler.ENTITY_ADDON_ENTITY_REGISTRIES.put("porcelain", ModEntities.class);
+
+        AddonHandler.ENTITY_ADDON_ENTITY_REGISTRIES.put("iron", ModEntities.class); AddonHandler.ENTITY_ADDON_ENTITY_REGISTRIES.put("porcelain", ModEntities.class);
 
         AddonHandler.ADDON_ENTITY_REGISTRIES.put("crystalparadise", ModEntities.class);
     }
