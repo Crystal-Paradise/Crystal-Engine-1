@@ -41,11 +41,6 @@ public class RenderIron extends MobRenderer<EntityIron, ModelIron<EntityIron>> {
     }
 
     @Override
-    public ResourceLocation getTextureLocation(EntityIron p_114482_) {
-        return null;
-    }
-
-    @Override
     protected void renderNameTag(EntityIron entityIn, Component displayNameIn, PoseStack matrixStackIn, MultiBufferSource bufferIn, int packedLightIn) {
         super.renderNameTag(entityIn, Component.literal("<"+entityIn.getFacet()+" "+entityIn.getCut()+">"), matrixStackIn, bufferIn, packedLightIn);
         matrixStackIn.translate(0.0D, (double)(9.0F * 1.15F * 0.025F), 0.0D);
