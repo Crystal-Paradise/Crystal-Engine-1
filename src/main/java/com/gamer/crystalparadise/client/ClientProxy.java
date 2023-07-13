@@ -1,8 +1,10 @@
 package com.gamer.crystalparadise.client;
 
 import com.gamer.crystalparadise.CrystalParadise;
+import com.gamer.crystalparadise.client.entity.model.ModelIron;
 import com.gamer.crystalparadise.client.entity.model.ModelKyanite;
 import com.gamer.crystalparadise.client.entity.model.ModelPorcelain;
+import com.gamer.crystalparadise.client.entity.render.RenderIron;
 import com.gamer.crystalparadise.client.entity.render.RenderKyanite;
 import com.gamer.crystalparadise.client.entity.render.RenderPorcelain;
 import com.gamer.crystalparadise.entity.ModEntities;
@@ -22,6 +24,7 @@ public class ClientProxy {
         public static void onClientSetup(EntityRenderersEvent.RegisterRenderers event) {
             event.registerEntityRenderer(ModEntities.KYANITE.get(), m -> new RenderKyanite(m, new ModelKyanite<>(m.bakeLayer(ModelKyanite.LAYER_LOCATION))));
             event.registerEntityRenderer(ModEntities.PORCELAIN.get(), m -> new RenderPorcelain(m, new ModelPorcelain<>(m.bakeLayer(ModelPorcelain.LAYER_LOCATION))));
+            event.registerEntityRenderer(ModEntities.IRON.get(), m -> new RenderIron(m, new ModelIron<>(m.bakeLayer(ModelIron.LAYER_LOCATION))));
         }
 
         @SubscribeEvent
@@ -29,6 +32,7 @@ public class ClientProxy {
             //register layers here
             event.registerLayerDefinition(ModelKyanite.LAYER_LOCATION, ModelKyanite::createBodyLayer);
             event.registerLayerDefinition(ModelPorcelain.LAYER_LOCATION, ModelPorcelain::createBodyLayer);
+            event.registerLayerDefinition(ModelIron.LAYER_LOCATION, ModelIron::createBodyLayer);
         }
 
     }

@@ -1,6 +1,7 @@
 package com.gamer.crystalparadise.entity;
 
 import com.gamer.crystalparadise.CrystalParadise;
+import com.gamer.crystalparadise.entity.gem.entities.EntityIron;
 import com.gamer.crystalparadise.entity.gem.entities.EntityKyanite;
 import com.gamer.crystalparadise.entity.gem.entities.EntityPorcelain;
 import com.gempire.Gempire;
@@ -20,7 +21,6 @@ import java.util.HashMap;
 
 public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Gempire.MODID);
-    public static HashMap<String, GemConditions> CRUXTOGEM = new HashMap<>();
 
     public static final RegistryObject<EntityType<EntityKyanite>> KYANITE = ENTITIES.register("kyanite",
             () -> EntityType.Builder.of(EntityKyanite::new, MobCategory.CREATURE)
@@ -30,21 +30,21 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<EntityPorcelain>> PORCELAIN = ENTITIES.register("porcelain",
             () -> EntityType.Builder.of(EntityPorcelain::new, MobCategory.CREATURE)
-                    .sized(.75f, 1.5f) // Hitbox Size
+                    .sized(.75f, 1.7f) // Hitbox Size
                     //Name of the gem (same as above) and where it will exist
                     .build(new ResourceLocation(CrystalParadise.MODID, "porcelain").toString()));
 
-    public static final RegistryObject<EntityType<EntityPorcelain>> IRON = ENTITIES.register("iron",
-            () -> EntityType.Builder.of(EntityPorcelain::new, MobCategory.CREATURE)
-                    .sized(.75f, 1.5f) // Hitbox Size
+    public static final RegistryObject<EntityType<EntityIron>> IRON = ENTITIES.register("iron",
+            () -> EntityType.Builder.of(EntityIron::new, MobCategory.CREATURE)
+                    .sized(.75f, 2.25f) // Hitbox Size
                     //Name of the gem (same as above) and where it will exist
                     .build(new ResourceLocation(CrystalParadise.MODID, "iron").toString()));
 
     public static void registerCruxes() {
         //register cruxes
-        ModEntities.CRUXTOGEM.put("kyanite", ModCruxes.KYANITE_CONDITIONS());
-        ModEntities.CRUXTOGEM.put("porcelain", ModCruxes.PORCELAIN_CONDITIONS());
-        ModEntities.CRUXTOGEM.put("iron", ModCruxes.PORCELAIN_CONDITIONS());
+        com.gempire.init.ModEntities.CRUXTOGEM.put("kyanite", ModCruxes.KYANITE_CONDITIONS());
+        com.gempire.init.ModEntities.CRUXTOGEM.put("porcelain", ModCruxes.PORCELAIN_CONDITIONS());
+        com.gempire.init.ModEntities.CRUXTOGEM.put("iron", ModCruxes.PORCELAIN_CONDITIONS());
 
         //possible to be injected with tier one (can be both)
         GemFormation.POSSIBLE_GEMS_TIER_1.add("kyanite");
@@ -62,7 +62,7 @@ public class ModEntities {
 
         AddonHandler.ENTITY_ADDON_ENTITY_REGISTRIES.put("porcelain", ModEntities.class);
 
-        AddonHandler.ENTITY_ADDON_ENTITY_REGISTRIES.put("iron", ModEntities.class); AddonHandler.ENTITY_ADDON_ENTITY_REGISTRIES.put("porcelain", ModEntities.class);
+        AddonHandler.ENTITY_ADDON_ENTITY_REGISTRIES.put("iron", ModEntities.class);
 
         AddonHandler.ADDON_ENTITY_REGISTRIES.put("crystalparadise", ModEntities.class);
     }

@@ -20,7 +20,7 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
-public class EntityIron extends EntityVaryingGem {
+public class EntityIron extends EntityGem {
     public EntityIron(EntityType<? extends PathfinderMob> type, Level worldIn) {
         super(type, worldIn);
     }
@@ -67,23 +67,6 @@ public class EntityIron extends EntityVaryingGem {
     }
 
     @Override
-    public int[] NeglectedColors() {
-        return new int[] {
-                2, 3, 5, 8, 9, 10, 12, 14, 16, 17
-        };
-    }
-
-    @Override
-    public boolean UsesUniqueNames() {
-        return false;
-    }
-
-    @Override
-    public String NameFromColor(byte b) {
-        return null;
-    }
-
-    @Override
     public Float baseXScale() {
         return 1F;
     }
@@ -104,15 +87,25 @@ public class EntityIron extends EntityVaryingGem {
     }
 
     @Override
+    public int getColor() {
+        return 0;
+    }
+
+    @Override
+    public int generateSkinVariant() {
+        return 0;
+    }
+
+    @Override
     public GemPlacements[] getPlacements() {
         return new GemPlacements[] {
-                GemPlacements.FOREHEAD, GemPlacements.LEFT_EYE,
-                GemPlacements.RIGHT_EYE, GemPlacements.LEFT_EAR,
-                GemPlacements.RIGHT_EAR, GemPlacements.NOSE,
-                GemPlacements.LEFT_CHEEK, GemPlacements.RIGHT_CHEEK,
-                GemPlacements.MOUTH, GemPlacements.LEFT_SHOULDER,
-                GemPlacements.RIGHT_SHOULDER, GemPlacements.CHEST
+                GemPlacements.LEFT_EYE, GemPlacements.RIGHT_EYE
         };
+    }
+
+    @Override
+    public int generateHairVariant() {
+        return 0;
     }
 
     @Override
@@ -122,7 +115,7 @@ public class EntityIron extends EntityVaryingGem {
 
     @Override
     public int generateOutfitVariant() {
-        return 0;
+        return this.random.nextInt(1);
     }
 
     @Override
@@ -141,8 +134,13 @@ public class EntityIron extends EntityVaryingGem {
     }
 
     @Override
+    public int generateSkinColorVariant() {
+        return 0;
+    }
+
+    @Override
     public boolean hasSkinColorVariant() {
-        return true;
+        return false;
     }
 
     @Override
