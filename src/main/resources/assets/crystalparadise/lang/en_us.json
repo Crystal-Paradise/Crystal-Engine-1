@@ -1,16 +1,19 @@
 {
-  "item.crystalparadise.porcelain_gem_0": "White Porcelain",
-  "item.crystalparadise.porcelain_gem_4": "Yellow Porcelain",
-  "item.crystalparadise.porcelain_gem_6": "Pink Porcelain",
-  "item.crystalparadise.porcelain_gem_11": "Blue Porcelain",
-  "item.crystalparadise.kyanite_gem_1": "Orange Kyanite",
-  "item.crystalparadise.kyanite_gem_7": "Grey Kyanite",
-  "item.crystalparadise.kyanite_gem_11": "Blue Kyanite",
-  "item.crystalparadise.kyanite_gem_13": "Green Kyanite",
-  "item.crystalparadise.kyanite_gem_15": "Black Kyanite",
+  "item.crystalparadise.porcelain_gem_0": "White Porcelain Gem",
+  "item.crystalparadise.porcelain_gem_4": "Yellow Porcelain Gem",
+  "item.crystalparadise.porcelain_gem_6": "Pink Porcelain Gem",
+  "item.crystalparadise.porcelain_gem_11": "Blue Porcelain Gem",
+  "item.crystalparadise.kyanite_gem_1": "Orange Kyanite Gem",
+  "item.crystalparadise.kyanite_gem_7": "Grey Kyanite Gem",
+  "item.crystalparadise.kyanite_gem_11": "Blue Kyanite Gem",
+  "item.crystalparadise.kyanite_gem_13": "Green Kyanite Gem",
+  "item.crystalparadise.kyanite_gem_15": "Black Kyanite Gem",
+
+  "item.crystalparadise.iron_gem": "Iron Gem",
 
   "entity.gempire.kyanite": "Kyanite",
   "entity.gempire.porcelain": "Porcelain",
+  "entity.gempire.iron": "Iron",
 
   "itemGroup.gemtab": "Gem Tab"
 }

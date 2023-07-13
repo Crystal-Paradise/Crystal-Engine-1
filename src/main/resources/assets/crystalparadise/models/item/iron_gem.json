@@ -1,26 +1,26 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "crystalparadise:items/iron_gem_0"
+    "layer0": "crystalparadise:items/iron_gem"
   },
   "overrides": [
     {
       "predicate": {
         "gempire:gempredicate": 0.1
       },
-      "model": "crystalparadise:item/porcelain_gem_11_sludge"
+      "model": "crystalparadise:item/iron_gem_sludge"
     },
     {
       "predicate": {
         "gempire:gempredicate": 0.2
       },
-      "model": "crystalparadise:item/porcelain_gem_11_cracked"
+      "model": "crystalparadise:item/iron_gem_cracked"
     },
     {
       "predicate": {
         "gempire:gempredicate": 1.0
       },
-      "model": "crystalparadise:item/porcelain_gem_11_perfect"
+      "model": "crystalparadise:item/iron_gem_perfect"
     }
   ]
 }
