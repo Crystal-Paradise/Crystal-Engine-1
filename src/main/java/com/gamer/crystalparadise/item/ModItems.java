@@ -25,7 +25,16 @@ public class ModItems {
              new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
 
+    public static final RegistryObject<Item> WHITE_KYANITE_GEM = ITEMS.register("kyanite_gem_0", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+
     public static final RegistryObject<Item> ORANGE_KYANITE_GEM = ITEMS.register("kyanite_gem_1", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+
+    public static final RegistryObject<Item> YELLOW_KYANITE_GEM = ITEMS.register("kyanite_gem_4", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
+
+    public static final RegistryObject<Item> PINK_KYANITE_GEM = ITEMS.register("kyanite_gem_6", () ->
             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
     public static final RegistryObject<Item> GRAY_KYANITE_GEM = ITEMS.register("kyanite_gem_7", () ->
