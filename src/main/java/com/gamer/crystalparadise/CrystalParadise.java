@@ -1,5 +1,6 @@
 package com.gamer.crystalparadise;
 
+import com.gamer.crystalparadise.entity.gem.entities.EntityChabazite;
 import com.gamer.crystalparadise.entity.gem.entities.EntityIron;
 import com.gamer.crystalparadise.entity.gem.entities.EntityKyanite;
 import com.gamer.crystalparadise.entity.ModEntities;
@@ -46,6 +47,7 @@ public class CrystalParadise
         event.put(ModEntities.KYANITE.get(), EntityKyanite.registerAttributes().build());
         event.put(ModEntities.PORCELAIN.get(), EntityPorcelain.registerAttributes().build());
         event.put(ModEntities.IRON.get(), EntityIron.registerAttributes().build());
+        event.put(ModEntities.CHABAZITE.get(), EntityChabazite.registerAttributes().build());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
