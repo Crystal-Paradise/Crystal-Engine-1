@@ -3,6 +3,8 @@ package com.gamer.crystalparadise.client.entity.model;// Made with Blockbench 4.
 // Paste this class into your mod and generate all required imports
 
 
+import com.gempire.client.entity.model.ModelGem;
+import com.gempire.entities.bases.EntityGem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.EntityModel;
@@ -12,10 +14,11 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.HumanoidArm;
 
-public final class ModelChabazite <T extends Entity> extends EntityModel<T> {
+public class ModelChabazite <T extends EntityGem> extends ModelGem<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "chabazite"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("crystalparadise", "chabazite"), "main");
 	private final ModelPart RightLeg;
 	private final ModelPart LeftLeg;
 	private final ModelPart Head;
@@ -80,8 +83,8 @@ public final class ModelChabazite <T extends Entity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-
+	public ModelPart getArm(HumanoidArm p_102852_) {
+		return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
 	}
 
 	@Override
