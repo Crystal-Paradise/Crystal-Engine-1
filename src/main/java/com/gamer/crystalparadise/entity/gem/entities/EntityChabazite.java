@@ -3,6 +3,7 @@ package com.gamer.crystalparadise.entity.gem.entities;
 import com.gamer.crystalparadise.item.ModItems;
 import com.gempire.entities.ai.*;
 import com.gempire.entities.bases.EntityGem;
+import com.gempire.entities.bases.EntityVaryingGem;
 import com.gempire.entities.other.EntityAbomination;
 import com.gempire.entities.other.EntityCrawler;
 import com.gempire.entities.other.EntityShambler;
@@ -19,9 +20,14 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
-public class EntityChabazite extends EntityGem {
+public class EntityChabazite extends EntityVaryingGem {
     public EntityChabazite(EntityType<? extends PathfinderMob> type, Level worldIn) {
         super(type, worldIn);
+    }
+
+    @Override
+    public int[] NeglectedColors() {
+        return new int[0];
     }
 
     public static AttributeSupplier.Builder registerAttributes() {
@@ -135,6 +141,16 @@ public class EntityChabazite extends EntityGem {
     @Override
     public int generateSkinColorVariant() {
         return 0;
+    }
+
+    @Override
+    public boolean UsesUniqueNames() {
+        return false;
+    }
+
+    @Override
+    public String NameFromColor(byte b) {
+        return null;
     }
 
     @Override
