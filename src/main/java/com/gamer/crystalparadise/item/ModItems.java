@@ -53,6 +53,8 @@ public class ModItems {
     public static final RegistryObject<Item> IRON_GEM = ITEMS.register("iron_gem", () ->
             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
+    public static final RegistryObject<Item> YELLOW_CHABAZITE_GEM = ITEMS.register("chabazite_gem_0", () ->
+            new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 }
 
 

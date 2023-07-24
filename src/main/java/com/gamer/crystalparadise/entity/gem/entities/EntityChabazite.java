@@ -27,7 +27,9 @@ public class EntityChabazite extends EntityVaryingGem {
 
     @Override
     public int[] NeglectedColors() {
-        return new int[0];
+        return new int[] {
+                1, 4, 6, 8, 14
+        };
     }
 
     public static AttributeSupplier.Builder registerAttributes() {
