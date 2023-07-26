@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "crystalparadise:items/chabazite_gem_2",
+    "layer0": "crystalparadise:items/chabazite_gem_14",
     "layer1": "gempire:items/cracks/round_gem_crack"
   }
 }

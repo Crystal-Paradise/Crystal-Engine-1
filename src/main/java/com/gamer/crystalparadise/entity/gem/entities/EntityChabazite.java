@@ -157,7 +157,7 @@ public class EntityChabazite extends EntityVaryingGem {
 
     @Override
     public boolean hasSkinColorVariant() {
-        return false;
+        return true;
     }
 
     @Override

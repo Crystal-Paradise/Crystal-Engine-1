@@ -53,19 +53,20 @@ public class ModItems {
     public static final RegistryObject<Item> IRON_GEM = ITEMS.register("iron_gem", () ->
             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-    public static final RegistryObject<Item> YELLOW_CHABAZITE = ITEMS.register("chabazite_gem_0", () ->
+
+    public static final RegistryObject<Item> WHITE_CHABAZITE_GEM = ITEMS.register("chabazite_gem_0", () ->
             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-    public static final RegistryObject<Item> PINK_CHABAZITE = ITEMS.register("chabazite_gem_1", () ->
+    public static final RegistryObject<Item> ORANGE_CHABAZITE_GEM = ITEMS.register("chabazite_gem_1", () ->
             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-    public static final RegistryObject<Item> WHITE_CHABAZITE = ITEMS.register("chabazite_gem_2", () ->
+    public static final RegistryObject<Item> YELLOW_CHABAZITE_GEM = ITEMS.register("chabazite_gem_4", () ->
             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-    public static final RegistryObject<Item> ORANGE_CHABAZITE = ITEMS.register("chabazite_gem_3", () ->
+    public static final RegistryObject<Item> PINK_CHABAZITE_GEM = ITEMS.register("chabazite_gem_6", () ->
             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 
-    public static final RegistryObject<Item> FLAME_CHABAZITE = ITEMS.register("chabazite_gem_4", () ->
+    public static final RegistryObject<Item> RED_CHABAZITE_GEM = ITEMS.register("chabazite_gem_14", () ->
             new ItemGem(new Item.Properties().tab(ModCreativeModeTab.GEMS_TAB), CrystalParadise.MODID));
 }
 

@@ -11,11 +11,16 @@
   "item.crystalparadise.kyanite_gem_11": "Blue Kyanite Gem",
   "item.crystalparadise.kyanite_gem_13": "Green Kyanite Gem",
   "item.crystalparadise.kyanite_gem_15": "Black Kyanite Gem",
-
+  "item.crystalparadise.chabazite_gem_0": "White Chabazite Gem",
+  "item.crystalparadise.chabazite_gem_1": "Orange Chabazite Gem",
+  "item.crystalparadise.chabazite_gem_4": "Yellow Chabazite Gem",
+  "item.crystalparadise.chabazite_gem_6": "Pink Chabazite Gem",
+  "item.crystalparadise.chabazite_gem_14": "Flame Chabazite Gem",
   "item.crystalparadise.iron_gem": "Iron Gem",
 
   "entity.gempire.kyanite": "Kyanite",
   "entity.gempire.porcelain": "Porcelain",
+  "entity.gempire.chabazite": "Chabazite",
   "entity.gempire.iron": "Iron",
 
   "itemGroup.gemtab": "Gem Tab"
