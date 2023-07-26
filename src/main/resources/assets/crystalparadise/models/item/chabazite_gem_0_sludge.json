@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "crystalparadise:items/chabazite_gem_0_sludge",
+    "layer0": "crystalparadise:items/chabazite_gem_0",
     "layer1": "gempire:items/sludge/med_gem_sludge"
   }
 }
