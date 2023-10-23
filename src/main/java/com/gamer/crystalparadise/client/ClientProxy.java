@@ -74,6 +74,11 @@ public class ClientProxy {
                                 populator.accept(ModItems.WHITE_PORCELAIN_GEM.get());
 
                                 populator.accept(ModItems.IRON_GEM.get());
+
+                                populator.accept(ModItems.INACTIVE_CHABAZITE_BASE.get());
+                                populator.accept(ModItems.INACTIVE_PORCELAIN_BASE.get());
+                                populator.accept(ModItems.INACTIVE_KYANITE_BASE.get());
+                                populator.accept(ModItems.INACTIVE_IRON_BASE.get());
                             })
                             .build());
         }
