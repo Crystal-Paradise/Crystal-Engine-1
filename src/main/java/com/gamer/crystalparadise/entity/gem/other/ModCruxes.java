@@ -10,6 +10,8 @@ import net.minecraft.world.level.block.Blocks;
 import java.util.ArrayList;
 
 public class ModCruxes {
+
+    //NO LONGER APPLICABLE FOR INCUBATION
     private static final int stoneCruxValue = 1;
 
     public static GemConditions KYANITE_CONDITIONS() {

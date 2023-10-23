@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "crystalparadise:items/iron_gem"
+    "layer0": "crystalparadise:item/iron_gem"
   },
   "overrides": [
     {

@@ -2,13 +2,14 @@ package com.gamer.crystalparadise.entity.gem.entities;
 
 import com.gamer.crystalparadise.CrystalParadise;
 import com.gamer.crystalparadise.item.ModItems;
+import com.gempire.entities.abilities.AbilityZilch;
+import com.gempire.entities.abilities.base.Ability;
 import com.gempire.entities.ai.*;
 import com.gempire.entities.bases.EntityGem;
 import com.gempire.entities.bases.EntityVaryingGem;
 import com.gempire.entities.other.EntityAbomination;
 import com.gempire.entities.other.EntityCrawler;
 import com.gempire.entities.other.EntityShambler;
-import com.gempire.util.Abilities;
 import com.gempire.util.GemPlacements;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
@@ -20,6 +21,8 @@ import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+
+import java.util.ArrayList;
 
 public class EntityKyanite extends EntityVaryingGem {
     public EntityKyanite(EntityType<? extends PathfinderMob> type, Level worldIn) {
@@ -167,16 +170,16 @@ public class EntityKyanite extends EntityVaryingGem {
     }
 
     @Override
-    public Abilities[] possibleAbilities() {
-        return new Abilities[] {
-            Abilities.NO_ABILITY
-        };
+    public ArrayList<Ability> possibleAbilities(){
+        ArrayList<Ability> arrayList = new ArrayList<>();
+        arrayList.add(new AbilityZilch());
+        return arrayList;
     }
 
     @Override
-    public Abilities[] definiteAbilities() {
-        return new Abilities[] {
-                Abilities.NO_ABILITY
-        };
+    public ArrayList<Ability> definiteAbilities(){
+        ArrayList<Ability> arrayList = new ArrayList<>();
+        arrayList.add(new AbilityZilch());
+        return arrayList;
     }
 }

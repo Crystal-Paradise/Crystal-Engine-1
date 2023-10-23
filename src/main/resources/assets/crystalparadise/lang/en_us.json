@@ -18,10 +18,15 @@
   "item.crystalparadise.chabazite_gem_14": "Flame Chabazite Gem",
   "item.crystalparadise.iron_gem": "Iron Gem",
 
+  "item.crystalparadise.inactive_iron_base": "Inactive Iron Base",
+  "item.crystalparadise.inactive_porcelain_base": "Inactive Porcelain Base",
+  "item.crystalparadise.inactive_chabazite_base": "Inactive Chabazite Base",
+  "item.crystalparadise.inactive_kyanite_base": "Inactive Kyanite Base",
+
   "entity.gempire.kyanite": "Kyanite",
   "entity.gempire.porcelain": "Porcelain",
   "entity.gempire.chabazite": "Chabazite",
   "entity.gempire.iron": "Iron",
 
-  "itemGroup.gemtab": "Gem Tab"
+  "crystal_paradise.itemGroup.gemtab": "Gem Tab"
 }
