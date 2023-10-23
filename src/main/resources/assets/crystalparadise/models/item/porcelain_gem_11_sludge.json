@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "crystalparadise:items/porcelain_gem_11",
-    "layer1": "gempire:items/sludge/med_gem_sludge"
+    "layer0": "crystalparadise:item/porcelain_gem_11",
+    "layer1": "gempire:item/sludge/med_gem_sludge"
   }
 }
